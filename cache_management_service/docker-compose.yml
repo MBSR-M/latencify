@@ -12,8 +12,14 @@ services:
       - CACHE_MAX_SIZE=1000
     depends_on:
       - redis
+      - logging_service
 
   redis:
     image: redis:latest
     ports:
       - "6379:6379"
+
+  logging_service:
+    image: your-logging-service-image
+    ports:
+      - "5001:5001"  # Adjust the port based on your logging service
