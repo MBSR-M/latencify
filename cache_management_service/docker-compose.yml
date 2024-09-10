@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  cache_management_service:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - CACHE_EXPIRATION=3600
+      - CACHE_MAX_SIZE=1000
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

@@ -1,0 +1,9 @@
+cache_management_service/
+├── cache_management_service
+│   ├── __init__.py
+│   ├── config.py
+│   ├── cache_manager.py
+│   ├── main.py
+├── Dockerfile
+├── docker-compose.yml
+└── requirements.txt
