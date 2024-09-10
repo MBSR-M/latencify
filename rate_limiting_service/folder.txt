@@ -1,0 +1,9 @@
+rate_limiting_service/
+├── rate_limiting_service
+│   ├── __init__.py
+│   ├── config.py
+│   ├── rate_limiter.py
+│   ├── main.py
+├── Dockerfile
+├── docker-compose.yml
+└── requirements.txt

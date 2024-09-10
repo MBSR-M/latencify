@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  rate_limiting_service:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - RATE_LIMIT=100
+      - TIME_WINDOW=60
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

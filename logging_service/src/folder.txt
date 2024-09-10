@@ -1,0 +1,10 @@
+logging_service/
+├── logging_service
+│   ├── __init__.py
+│   ├── config.py
+│   ├── log_manager.py
+│   ├── log_handler.py
+│   └── main.py
+├── Dockerfile
+├── docker-compose.yml
+└── requirements.txt
